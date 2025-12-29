@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema
+    id="org.gnome.shell.extensions.clock-weather-switch"
+    path="/org/gnome/shell/extensions/clock-weather-switch/">
+
+    <!-- Wechselintervall -->
+    <key name="interval-seconds" type="i">
+      <default>8</default>
+      <summary>Switch interval</summary>
+      <description>Seconds between switching time and weather.</description>
+      <range min="2" max="120"/>
+    </key>
+
+    <!-- Uhr-Icon -->
+    <key name="show-clock-icon" type="b">
+      <default>true</default>
+      <summary>Show clock icon</summary>
+      <description>Whether to show the clock emoji before the time text.</description>
+    </key>
+
+    <!-- Manuelle Stadt (Suchbegriff) -->
+    <key name="location-query" type="s">
+      <default>'Berlin'</default>
+      <summary>Location search query</summary>
+      <description>City name entered by the user for weather lookup.</description>
+    </key>
+
+    <!-- Aufgelöster Anzeigename -->
+    <key name="location-label" type="s">
+      <default>''</default>
+      <summary>Resolved location name</summary>
+      <description>Human-readable name of the detected location.</description>
+    </key>
+
+    <!-- Koordinaten (für spätere direkte Wetterabfrage) -->
+    <key name="latitude" type="d">
+      <default>0.0</default>
+      <summary>Latitude</summary>
+      <description>Latitude of the selected location.</description>
+    </key>
+
+    <key name="longitude" type="d">
+      <default>0.0</default>
+      <summary>Longitude</summary>
+      <description>Longitude of the selected location.</description>
+    </key>
+
+  </schema>
+</schemalist>
+
