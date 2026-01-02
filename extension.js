@@ -10,7 +10,8 @@ function formatTimeAndDate() {
 
 export default class ClockWeatherExtension extends Extension {
     enable() {
-        this._settings = this.getSettings('org.gnome.shell.extensions.clock-weather-switch');
+        // Review Punkt 2: Keine ID mehr nötig, da in metadata.json definiert
+        this._settings = this.getSettings();
         this._httpSession = new Soup.Session();
         this._weatherCache = { text: '–°C', icon: '☁️' };
         this._showWeather = false;
@@ -111,7 +112,8 @@ export default class ClockWeatherExtension extends Extension {
         this._label.ease({
             translation_y: -12, opacity: 0, duration: 160,
             mode: Clutter.AnimationMode.EASE_OUT_QUAD,
-            onComplete: () => {
+            // Review Punkt 3: onComplete -> onStopped
+            onStopped: () => {
                 if (!this._label) return;
                 this._label.text = text;
                 this._label.translation_y = 12;
