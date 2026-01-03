@@ -2,11 +2,11 @@
   "uuid": "clock-weather-switch@erixx",
   "name": "Clock Weather Switch",
   "description": "Alternates between time and weather in the center clock with a slide animation. Weather data provided by open-meteo.com.",
-  "version": 3,
+  "version": 4,
   "shell-version": ["49"],
   "url": "https://github.com/erixx-hub/clock-weather-switch",
   "settings-schema": "org.gnome.shell.extensions.clock-weather-switch",
   "donations": {
-    "paypal": "https://paypal.me/erikheidenreich652"
+    "paypal": "erikheidenreich652"
   }
 }
